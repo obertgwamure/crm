@@ -13,13 +13,13 @@
     </style>
 </head>
 <body>
-    <h1>This is a test page</h1>
-    <h3>Leads</h3>
-    {% for lead in leads %}
+    <h1>Lead Details:</h1>
     <div class="lead">
-        {{ lead.first_name }} {{ lead.last_name }}. Age:{{ lead.age }}  
+       <p>First name: {{ lead.first_name }}</p>
+       <p>last name: {{ lead.last_name }}</p>
+       <p>Age: {{ lead.age }}</p>
     </div> 
-    {% endfor %}
+    <p>Agent: {{ lead.agent }}</p>
     </ul>
 </body>
 </html>
