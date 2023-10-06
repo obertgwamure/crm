@@ -1,18 +1,6 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Home</title>
-    <style>
-        .lead {
-            padding: 10px, 6px, 10px,6px;
-            margin-top:5px;
-            background-color: azure;
-        }
-    </style>
-</head>
-<body>
+{% extends 'base.html' %}
+{% block title %} Lead: {{ lead }} {% endblock %}
+{% block content %} 
     <a href="{% url 'leads:lead_list' %}"><button>back</button></a>
     <h1>Create Lead:</h1>
     <div class="lead">
@@ -21,6 +9,6 @@
             {{ form.as_p }}
             <button type="submit">submit</button>
         </form>
-    </ul>
-</body>
-</html>
+    </div>
+{% endblock %}
+

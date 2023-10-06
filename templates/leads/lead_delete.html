@@ -1,0 +1,26 @@
+{% extends 'base.html' %}
+{% block title %} Lead: {{ lead }} {% endblock %}
+{% block content %} 
+
+<section class="text-gray-600 body-font ">
+    <div class="container px-5 py-24 mx-auto my-24">
+      <div class="xl:w-1/2 lg:w-3/4 w-full mx-auto text-center">
+        <p class="leading-relaxed text-lg">
+            Are you sure you want to delete Lead?
+        </p>
+        <span class="inline-block h-1 w-10 rounded bg-indigo-500 mt-8 mb-6"></span>
+        <h2 class="text-gray-900 font-medium title-font tracking-wider text-sm">
+            {{ lead }}
+        </h2>
+        {% csrf_token %}
+        <form method="POST">
+            <button type="submit" class="mt-2 ml-auto text-white bg-red-500 border-0 py-2 px-6 focus:outline-none hover:bg-indigo-600 rounded">
+                Delete
+            </button>
+        </form>
+      </div>
+      </div>
+    </div>
+  </section>
+
+{% endblock %}
